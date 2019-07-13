@@ -1,0 +1,33 @@
+<h1>Ventas</h1>
+<%= notice %>
+
+<%= form_with model: Sale.new, local: true do |f| %>
+  <div>
+    <%= f.label :cod, "Ingresa tu código" %>
+    <%= f.number_field :cod %>
+  </div>
+  <div>
+    <%= f.label :detail, "Detalle" %>
+    <%= f.text_area :detail %>
+  </div>
+  <div>
+    <%= f.label :category, "Categoría" %>
+    <%= f.text_field :category %>
+  </div>
+  <div>
+    <%= f.label :value, "Valor" %>
+    <%= f.number_field :value %>
+  </div>
+  <div>
+    <%= f.label :discount, "Descuento" %>
+    <%= f.number_field :discount %>
+  </div>
+  <div>
+    <%= f.label :tax, "Impuesto" %>
+    <%= f.check_box :tax %>
+  </div>
+  <div>
+    <%= f.submit "Enviar" %>
+  </div>
+
+<% end %>
